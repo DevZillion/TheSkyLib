@@ -1,3 +1,5 @@
+# Thanks to Nitrus#1839 for making this cool script.
+
 import argparse, binascii, struct, warnings
 import sklykeys
 
