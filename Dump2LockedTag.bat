@@ -22,13 +22,13 @@ cls
 type logo
 echo File List:
 dir %cd%\dumps\blank_tags /b
-set /p btagfile="~~> [With extensions] Write the name of your BLANK TAG .dump/.dmp/.sky/.bin file:
+set /p btagfile="~~> [With extensions] Write the name of your BLANK TAG .dump/.dmp/.sky/.bin file: "
 goto GetSkyDump
 
 :GetDesiredName
 cls
 type logo
-set /p outputfilename="~~> [Without extensions] Write the name desired for your output .dump file:
+set /p outputfilename="~~> [Without extensions] Write the name desired for your output .dump file: "
 goto GenWorkplace
 
 :GenWorkplace
@@ -57,7 +57,7 @@ exit
 :CheckPython
 color 04
 echo ERROR - Python not installed.
-start https://www.python.org/
+start ms-windows-store://pdp/?productid=9P7QFQMJRFP7
 pause
 exit
 
