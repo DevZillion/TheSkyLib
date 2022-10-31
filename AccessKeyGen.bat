@@ -45,7 +45,7 @@ goto MainUID
 :CheckPython
 color 04
 echo ERROR - Python not installed.
-start https://www.python.org/
+start ms-windows-store://pdp/?productid=9P7QFQMJRFP7
 pause
 exit
 
