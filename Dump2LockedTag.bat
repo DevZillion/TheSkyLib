@@ -2,6 +2,8 @@
 cls
 @echo off
 color 30
+rm /s /q "dumps/blank_tags/Put the dump of the tags you want to write here" >nul 2>&1
+rm /s /q "dumps/skylanders/Put the dump of the skylanders you want to write here" >nul 2>&1
 rmdir /s /q workplace >nul 2>&1
 python --version >nul 2>&1
 if errorlevel 1 goto CheckPython

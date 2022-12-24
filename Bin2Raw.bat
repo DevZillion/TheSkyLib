@@ -4,6 +4,8 @@ cls
 color 30
 python --version >NUL 2>&1
 if errorlevel 1 goto CheckPython
+rm /s /q "dumps/blank_tags/Put the dump of the tags you want to write here" >nul 2>&1
+rm /s /q "dumps/skylanders/Put the dump of the skylanders you want to write here" >nul 2>&1
 mkdir output\Bin2Raw >nul 2>&1
 type logo
 title Skylanders Bin2Raw
