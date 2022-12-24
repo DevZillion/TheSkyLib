@@ -8,7 +8,7 @@ mkdir output\Bin2Raw >nul 2>&1
 type logo
 title Skylanders Bin2Raw
 set /p name="~~> Write the name you want for your .raw file: "
-if [%name%]==[] goto CheckName
+if ["%name%"]==[""] goto CheckName
 cls
 
 :MainFileSLCT
@@ -21,10 +21,10 @@ cls
 
 :MainRaw
 echo.
-python libs/sklykeys.py -f dumps/skylanders/%file% > output\Bin2Raw\%name%.raw.dump
+python libs/sklykeys.py -f "dumps/skylanders/%file%" > "output\Bin2Raw\%name%.raw.dump"
 cls
 type logo
-python libs/sklykeys.py -f dumps/skylanders/%file%
+python libs/sklykeys.py -f "dumps/skylanders/%file%"
 echo.
 pause
 exit

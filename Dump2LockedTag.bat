@@ -13,7 +13,7 @@ cls
 type logo
 title DumpAdaptor
 echo File List:
-dir %cd%\dumps\skylanders /b
+dir "%cd%\dumps\skylanders" /b
 set /p skyfile="~~> [With extensions] Write the name of your SKYLANDER .dump/.dmp/.sky/.bin file: "
 goto GetDesiredName
 
@@ -21,7 +21,7 @@ goto GetDesiredName
 cls
 type logo
 echo File List:
-dir %cd%\dumps\blank_tags /b
+dir "%cd%\dumps\blank_tags" /b
 set /p btagfile="~~> [With extensions] Write the name of your BLANK TAG .dump/.dmp/.sky/.bin file: "
 goto GetSkyDump
 
@@ -34,11 +34,11 @@ goto GenWorkplace
 :GenWorkplace
 mkdir workplace
 echo Getting Things Ready, Wait a moment.
-xcopy /s %cd%\libs\tnp3xxx.py workplace >nul
-xcopy /s %cd%\libs\sklykeys.py workplace >nul
-xcopy /s %cd%\libs\UID.py workplace >nul
-xcopy /s %cd%\dumps\skylanders\%skyfile% workplace >nul
-xcopy /s %cd%\dumps\blank_tags\%btagfile% workplace >nul
+xcopy /s "%cd%\libs\tnp3xxx.py" "workplace" >nul
+xcopy /s "%cd%\libs\sklykeys.py" "workplace" >nul
+xcopy /s "%cd%\libs\UID.py" "workplace" >nul
+xcopy /s "%cd%\dumps\skylanders\%skyfile%" "workplace" >nul
+xcopy /s "%cd%\dumps\blank_tags\%btagfile%" "workplace" >nul
 timeout /t 5 /nobreak >nul
 goto MainGen
 
@@ -46,18 +46,18 @@ goto MainGen
 cls
 echo.
 type logo
-%cd%\workplace\UID.py --blank %cd%\workplace\%btagfile% --sky %cd%\workplace\%skyfile% --name %outputfilename%
+"%cd%\workplace\UID.py" --blank "%cd%\workplace\%btagfile%" --sky "%cd%\workplace\%skyfile%" --name "%outputfilename%"
 echo.
 rmdir /s /q workplace
-copy %outputfilename%.dump output\Dump2LockedTag
+copy "%outputfilename%.dump" output\Dump2LockedTag
 timeout /t 4 /nobreak >nul
-del %outputfilename%.dump /q
+del "%outputfilename%.dump" /q
 exit
 
 :CheckPython
 color 04
 echo ERROR - Python not installed.
-start ms-windows-store://pdp/?productid=9P7QFQMJRFP7
+start "ms-windows-store://pdp/?productid=9P7QFQMJRFP7"
 pause
 exit
 
