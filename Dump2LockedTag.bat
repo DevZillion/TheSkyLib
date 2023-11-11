@@ -59,7 +59,7 @@ exit
 :CheckPython
 color 04
 echo ERROR - Python not installed.
-start "ms-windows-store://pdp/?productid=9P7QFQMJRFP7"
+start ms-windows-store://pdp/?productid=9P7QFQMJRFP7
 pause
 exit
 
