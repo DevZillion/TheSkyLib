@@ -48,7 +48,7 @@ goto MainGen
 cls
 echo.
 type logo
-"%cd%\workplace\UID.py" --blank "%cd%\workplace\%btagfile%" --sky "%cd%\workplace\%skyfile%" --name "%outputfilename%"
+python "%cd%\workplace\UID.py" --blank "%cd%\workplace\%btagfile%" --sky "%cd%\workplace\%skyfile%" --name "%outputfilename%"
 echo.
 rmdir /s /q workplace
 copy "%outputfilename%.dump" output\Dump2LockedTag
